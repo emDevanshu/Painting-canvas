@@ -1,0 +1,28 @@
+<html>
+    <link rel="stylesheet" href="painting.css">
+<head>        
+
+        <h1>Make your painting here</h1>
+        <p>Set Width
+        <input type="text" onchange="setWidth(this.value)">
+        Set Height
+        <input type="text" onchange="setHeight(this.value)"></p>
+        <canvas id="canvas1" onmousedown="startPaint()" 
+                onmousemove="doPaint(event.offsetX,event.offsetY)"
+                onmouseup="endPaint()"></canvas>
+
+        <p>Brush color
+            <input type="color" value="#000" onchange="changeColor(this.value)">
+            Brush Size
+            <input id="sizeinput" type="range" min="1" max="50" value="25" oninput="resizeBrush(this.value)">
+            <output id="sizeoutput">25</output>
+        </p>
+
+    <p>
+        <input id="clear" type="button" value="Clear canvas" onclick="clearCanvas()">
+    </p>
+
+</head>        
+<script src="painting.js"></script>     
+<script src="http://www.dukelearntoprogram.com/course1/common/js/image/SimpleImage.js" width=304 height=154></script>  
+</html>
